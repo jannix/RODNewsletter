@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>Ride Or Die Project</title>
+</head>
+<body class="is-preload">
+
+    <div id="background">
+        <section>
+
+            <form method="post" action="/">
+                <h1>RideOrDie Project</h1>
+                <p>Be the first one to know about the launch of RideOrDie and start riding before we all die.</p>
+                <% if (locals.error) { %>
+                <span>ERREUR</span>
+                <% } else if (locals.registered) { %>
+                <em><%= registered %></em>
+                <% } else { %>
+                <input type="email" name="registeringEmail" placeholder="Email Address" onkeyup="this.setAttribute('value', this.value);" value="" required />
+                <input type="submit" value="Sign Up" />
+                <% } %>
+            </form>
+
+            <footer id="footer">
+                <ul class="icons">
+                    <li class=""><a href="#" class="icon brands fa-twitter" title="Coming soon..."><span class="label">Twitter</span></a></li>
+                    <li class=""><a href="#" class="icon brands fa-instagram" title="Coming soon..."><span class="label">Instagram</span></a></li>
+                    <li class=""><a href="#" class="icon brands fa-github" title="Coming soon..."><span class="label">GitHub</span></a></li>
+                    <li class=""><a href="mailto:jannix.martinez@gmail.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
+                </ul>
+                <ul class="copyright">
+                    <li>&copy; ROD</li>
+                    <li>Credits: <a href="#">Jannix</a></li>
+                </ul>
+            </footer>
+        </section>
+    </div>
+    <script src="/js/main.js"></script>
+
+</body>
+</html>
